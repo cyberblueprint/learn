@@ -1,0 +1,2471 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Sidebar Transitions</title>
+		<meta name="description" content="Sidebar Transitions: Transition effects for off-canvas views" />
+		<meta name="keywords" content="transition, off-canvas, navigation, effect, 3d, css3, smooth" />
+		<meta name="author" content="Codrops" />
+		<script src="../js/modernizr.custom.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="../css/icons.css" />
+		<link rel="stylesheet" type="text/css" href="../css/component.css" />
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/prism.css"/>
+</head>
+	<body>
+		<div id="st-container" class="st-container">
+			<!-- 	
+				example menus 
+				these menus will be on top of the push wrapper
+			-->
+			
+			<nav class="st-menu st-effect-11" id="menu-11">
+				<h2 class="icon icon-lab">Languages<br/>and Frameworks</h2>
+				<ul>
+					<li><a href="../templates/c.html">C</a></li>
+					<li><a href="../templates/c++.html">C++</a></li>
+					<li><a href="../templates/python.html">Python</a></li>
+					<li><a href="../templates/djangoflask.html">Django & Flask</a></li>
+					<li><a href="../templates/javascript.html">Javascript</a></li>
+					<li><a href="../templates/angular.html">Angular.js</a></li>
+					<li><a href="../templates/react.html">React.js</a></li>
+					<li><a href="../templates/d3.html">D3.js</a></li>
+					<li><a href="../templates/dc.html">DC.js</a></li>
+					<li><a href="../templates/node.html">Node.js</a></li>
+					<li><a href="../templates/network.html">Mac OS X</a></li>
+					<li><a href="../templates/local.html">Local</a></li>
+					<li><a href="../templates/remote.html">Remote</a></li>
+					<li><a href="../templates/css.html">CSS</a></li>
+				</ul>
+			</nav>
+
+			
+
+			<!-- content push wrapper -->
+			<div class="st-pusher">
+				<!-- 	
+					example menus 
+					these menus will be under the push wrapper
+				-->
+				<div class="st-content"><!-- this is the wrapper for the content -->
+					<div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+						<!-- Top Navigation -->
+						<div class="codrops-top topbar">
+							<div id="st-trigger-effects"><button data-effect="st-effect-11">Menu</button></div>
+							<nav class="center">
+								<ul class="nav nav-tabs">
+									<li class="active"><a data-toggle="tab" href="#home">Syntax</a></li>
+									<li><a data-toggle="tab" href="#menu1">C Essential Trainning</a></li>
+									<li><a data-toggle="tab" href="#menu2">Design Patterns</a></li>
+									<li><a data-toggle="tab" href="#menu3">Compilation</a></li>
+									<li><a data-toggle="tab" href="#menu4">Code Clinic</a></li>
+								</ul>
+							</nav>
+						</div><!-- /main -->
+
+						<div class="container">
+							
+
+							<div class="tab-content">
+							<div id="home" class="tab-pane fade in active">
+							  <div>
+							  	  		<p class="accordion-expand-holder">
+										    <a class="accordion-expand-all" href="#">Expand all</a>
+										</p>
+										<div id="accordion" class="ui-accordion ui-widget ui-helper-reset">
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        1.- Outputs
+										    </h3>
+										    <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <p>Print Functions</p>
+										        <ul>
+										        	<li>printf()</li>
+										        	<li>putchar()</li>
+										        	<li>puts()</li>
+										        </ul>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>						   //A link to an external library file that handles standard input/output
+
+int main()							   //The Main function always return an integer
+{
+
+    printf("Hello World\n");   
+    printf("I\'m a \"computer\".");   
+    									   
+    return(0);							   //0 means execution was successful and the operating system is now informed
+}										        	
+										        </code></pre>
+												<p>Escape Keys</p>
+												<ul>
+													<li>\n New Line</li>
+													<li>\t Tab</li>
+													<li>\' Escape single quote</li>
+													<li>\" Escape double quote</li>
+													<li>\\ Display backspace character</li>
+												</ul>
+
+										    </div>
+										        <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        2.- Placeholders
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <ul>
+										        	<li>%d Integer values</li>
+										        	<li>%s Strings</li>
+										        	<li>%f Floating points</li>
+										        	<li>%c Single characters</li>
+										        	<li>%% Percentage sign</li>
+										        	<li>p% pointer to memory</li>
+										        </ul>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>						   
+
+int main()							   
+
+{
+
+    printf("2+2=%d, not %d \n", 2+2, 5);   
+    printf("I'm a %c %s \n", "C", "programmer");
+    printf("I got %d%% in my exam", 98);
+    									   
+    return(0);							   
+}							        	
+										        </code></pre>
+										    </div>
+										        <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        3.- Variables
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <ul>
+										        	<li>int: Integer or whole-number values</li>
+										        	<li>float: Floating-point numbers</li>
+										        	<li>char: Single characters</li>
+										        	<li>double</li>
+										        	<li>long</li>
+										        	<li>short</li>
+										        	<li>signed</li>
+										        	<li>unsigned</li>
+										        </ul>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int age;
+
+	age = 32;
+	printf("%s is %d years old.\n","Dan",age);
+	printf("That's %d months!\n",age*12);
+
+	return(0);
+}									        	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	char x,y,z;
+
+	x = 'A';
+	y = x+1;
+	z = x+2;
+
+	printf("It's as easy as %c%c%c\n",x,y,z);
+
+	return(0);
+}										        	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	float pi;
+
+	pi = 22.00 / 7.0;
+	printf("The ancients calculated PI as %f.\n",pi);
+
+	return(0);
+}										        	
+										        </code></pre>
+										    </div>
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        4.- Char I/O
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int c;
+
+	printf("Type a letter: ");
+	c = getchar();
+	printf("You typed '%c'.\n",c);
+
+	return(0);
+}										        	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int a,b;
+
+	printf("Type two letters: ");
+	a = getchar();
+	b = getchar();
+	printf("You typed '");
+	putchar(a);
+	printf("' and '");
+	putchar(b);
+	printf("'.\n");
+
+	return(0);
+}									        	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int a,b,c;
+
+	printf("Type three letters: ");
+	a = getchar();
+	putchar(a);
+	b = getchar();
+	putchar(b);
+	c = getchar();
+	putchar(c);
+
+	return(0);
+}										        	
+										        </code></pre>
+										    </div>
+
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        5.- Strings I/O
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	char password[] = "spatula";
+
+	printf("The password is \"%s\"\n",password);
+
+	return(0);
+}										        	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int x;
+
+	printf("Type an integer: ");
+	scanf("%d",&x);
+	printf("Integer %d\n",x);
+
+	return(0);
+}									        	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	char name[15];		/* room for 14 characters */
+
+	printf("Your name? ");
+	scanf("%s",name);
+	printf("You are %s.\n",name);
+
+	return(0);
+}									        	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	char input[64];		/* 63 characters plus null */
+
+	printf("Instructions: ");
+	fgets(input,64,stdin);
+	puts("Thank you! Here are your instructions:");
+	puts(input);
+
+	return(0);
+}								        	
+										        </code></pre>
+										    </div>
+
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        6.- Operators and Math
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int a;
+	int b = 5;
+
+	printf("Input an integer: ");
+	scanf("%d",&a);
+	printf("%d + %d = %d\n",a,b,a+b);
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	float a;
+    float b = 5.0;
+
+	printf("Input a number: ");
+	scanf("%f",&a);
+	printf("%f / %f = %f\n",a,b,a/b);
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int x = 10;
+
+	printf("%d\n",x);
+	x = x + 1;
+	printf("%d\n",x);
+
+	return(0);
+}    	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include <stdio.h>
+
+int main()
+{
+	int a;
+
+	a = 25 / 5 * 2 + 3;
+	printf("The answer is %d\n",a);
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;math.h>
+
+int main()
+{
+	float p;
+
+	p = pow(2.0,8.0);
+
+	printf("2 to the 8th power is %f\n",p);
+
+	return(0);
+}       	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+
+int main()
+{
+	int r;
+
+	srand((unsigned)time(NULL));
+	r = rand();
+
+	printf("%d is a random number.\n",r);
+
+	return(0);
+}	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;math.h>
+
+int main()
+{
+    float r;
+
+    r = sqrt(2.0);
+
+	printf("The square root of 2 is %f\n",r);
+
+	return(0);
+}
+										        </code></pre>
+										    </div>
+
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        7.- If/Else
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int a;
+
+	printf("Type an integer: ");
+	scanf("%d",&a);
+	printf("You typed %d.\n",a);
+	if( a > 10 )
+		printf("%d is greater than 10.\n",a);
+
+	return(0);
+}    	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int a;
+
+	printf("Type an integer: ");
+	scanf("%d",&a);
+	printf("You typed %d.\n",a);
+	if( a > 10 )
+    {
+		printf("%d is greater than 10.\n",a);
+    }
+	if( a < 10)
+	{
+		printf("%d is less than 10.\n",a);
+	}
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int a = -5;
+
+	if(a > 0);
+		printf("%d is a positive number.\n",a);
+	
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int a;
+
+	printf("Type an integer: ");
+	scanf("%d",&a);
+	printf("You typed %d.\n",a);
+	if( a > 10 )
+    {
+		printf("%d is greater than 10.\n",a);
+    }
+	else
+	{
+		printf("%d is less than or equal to 10.\n",a);
+	}
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int a;
+
+	printf("Type an integer: ");
+	scanf("%d",&a);
+	printf("You typed %d.\n",a);
+	if( a > 10 )
+    {
+		printf("%d is greater than 10.\n",a);
+    }
+	else if( a < 10)
+	{
+		printf("%d is less than 10.\n",a);
+	}
+	else
+	{
+		printf("%d is 10.\n",a);
+	}
+
+	return(0);
+}
+										        </code></pre>
+										    </div>
+
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        8.- Switch
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	char a;
+
+	printf("Your choice (1,2,3): ");
+	scanf("%c",&a);
+
+	switch(a)
+	{
+		case '1':
+			puts("Excellent choice!");
+			break;
+		case '2':
+			puts("This is the most common choice.");
+			break;
+		case '3':
+			puts("I question your judgement.");
+			break;
+		default:
+			puts("That's not a valid choice.");
+	}
+
+	return(0);
+}			        	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	char a;
+
+	puts("Vacation options:");
+	puts("A - Airfare");
+	puts("B - Hotel");
+	puts("C - Rental Car");
+	scanf("%c",&a);
+
+	switch(a)
+	{
+		case 'A':
+			puts("You have selected the airfare");
+			break;
+		case 'B':
+            puts("You have selected the hotel");
+			break;
+		case 'C':
+			puts("You have selected the rental car");
+			break;
+		default:
+			puts("Invalid choice.");
+	}
+
+	return(0);
+}
+										        </code></pre>
+										    </div>
+
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        9.- While Loops
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int x;
+
+	x = 1;
+	while( x <= 10 )
+	{
+		printf("%d\n",x);
+		x++;
+	}
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#include &lt;time.h>
+
+int main()
+{
+	int x,r;
+
+	srand((unsigned)time(NULL));	/* Seed randomizer */
+	
+	x = 10;
+	while( x > 0 )
+	{
+		r = rand();
+		printf("%d\n",r);
+		x--;
+	}
+
+	return(0);
+}	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int a,b;
+
+	a = 7;
+	while( a < 30 )
+	{
+		b = a % 7;		/* b equals a mod 7 */
+		printf("%d %% 7 = %d\n",a,b);
+		a++;
+	}
+
+	return(0);
+}     	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	char ch;
+
+	ch = 'A';
+
+	do
+	{
+		putchar(ch);
+		ch++;
+	}
+	while( ch != 'Z');
+
+	putchar('\n');
+
+	return(0);
+}		        	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	while(1)
+	{
+		printf("I'm endlessly looping! ");
+	}
+
+	return(0);
+}        	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int a = 0;
+
+	while(1)
+	{
+		puts("Here I go...!");
+		a++;
+		if( a > 10)
+			break;
+	}
+
+	return(0);
+}  	
+										        </code></pre>
+										    </div>
+
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        10.- For Loops
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int x;
+
+	for(x=0;x<10;x++)
+		printf("%d\n",x);
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#include &lt;time.h>
+
+int main()
+{
+	int column,r;
+
+	srand((unsigned)time(NULL));	/* Seed randomizer */
+
+	for(column=0;column<10;column++)
+	{
+		r = rand();
+		printf("%2d\t",r % 100);    /* keep random numbers between 0 and 99 */
+	}
+	putchar('\n');                  /* newline output, end of line */
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	char ch,t;
+
+	printf("Type a letter 'a' to 'z': ");
+	scanf("%c",&ch);
+
+	for(t='a';t<='z';t++)
+	{
+		putchar(t);
+		if( t == ch)
+			break;
+	}
+	putchar('\n');
+
+	return(0);
+}
+										        </code></pre>
+										    </div>
+
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        11.- Nested Loops
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#include &lt;time.h>
+
+int main()
+{
+	int row,column,r;
+
+	srand((unsigned)time(NULL));	/* Seed randomizer */
+
+	for(row=0;row<10;row++)
+	{
+		for(column=0;column<10;column++)
+		{
+			r = rand();
+			printf("%2d\t",r % 100);    /* keep random numbers between 0 and 99 */
+		}
+		putchar('\n');                  /* newline output, end of line */
+	}
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int alpha,numeric;
+
+
+	for(alpha='A';alpha<'K';alpha++)
+	{
+		for(numeric=0;numeric<10;numeric++)
+			printf("%c%d\t",alpha,numeric);
+		putchar('\n');
+	}
+
+	return(0);
+}	
+										        </code></pre>
+										    </div>
+
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        12.- Functions
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+void blorf(void);
+
+int main()
+{
+	puts("The main() function always runs first");
+	blorf();
+	puts("Thanks, blorf()");
+
+	return(0);
+}
+
+void blorf(void)
+{
+	puts("The blorf() function runs when it's called");
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+void soup(void)
+{
+	puts("Pea green soup!");
+}
+
+int main()
+{
+	printf("For breakfast I had ");
+	soup();
+	printf("For lunch I had ");
+	soup();
+	printf("For dinner I had ");
+	soup();
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+void cheers(void);
+
+int main()
+{
+	puts("Everyone gets free dinner!");
+	cheers();
+	puts("Everyone gets free dessert!");
+	cheers();
+	puts("Everyone pays higher taxes!\n");
+
+	return(0);
+}
+
+void cheers(void)
+{
+	int x;
+
+	for(x=0;x<3;x++)
+		printf("Huzzah! ");
+	putchar('\n');
+}
+										        </code></pre>
+										    </div>
+
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        13.- Arguments
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-clike">
+#include &lt;stdio.h>
+
+void repeat(int count);
+
+int main()
+{
+	puts("At first the raven was like:");
+	repeat(1);
+	puts("But then he was all:");
+	repeat(5);
+
+	return(0);
+}
+
+void repeat(int count)
+{
+	int x;
+
+	for(x=0;x&lt;count;x++)
+		puts("Nevermore!");
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+void product(float a, float b, float c);
+
+int main()
+{
+	float x,y,z;
+
+	printf("Type three numbers, separated by spaces: ");
+	scanf("%f %f %f",&x,&y,&z);
+	product(x,y,z);
+
+	return(0);
+}
+
+void product(float a, float b, float c)
+{
+	float p;
+
+	p = a * b * c;
+	printf("%f * %f * %f = %f\n",a,b,c,p);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+void bar(char c, int count);
+
+int main()
+{
+	int x;
+
+	for(x=1;x&lt;11;x++)
+		bar('*',x*2);
+
+	return(0);
+}
+
+void bar(char c, int count)
+{
+	int x;
+
+	for(x=0;x&lt;count;x++)
+		putchar(c);
+	putchar('\n');
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+void evaluate(int x)
+
+int main()
+{
+	int i;
+
+	printf("Type an integer value: ");
+	scanf("%d",&i);
+	evaluate(i);
+
+	return(0);
+}
+
+void evaluate(int x)
+{
+	if (x < 10)
+	{
+		printf("The value %d is less than 10.\n", x);
+	} else if (x > 10)
+	{
+		printf("The value %d is greater than 10.\n", x);
+	} else 
+	{
+		printf("The value %d is equal to 10.\n", x);
+	}
+}
+										        </code></pre>
+										    </div>
+
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        14.- Return
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+char gimmeAnA(void);
+
+int main()
+{
+	char grade;
+
+	grade = gimmeAnA();
+	printf("On this test you received an %c.\n",grade);
+
+	return(0);
+}
+
+char gimmeAnA(void)
+{
+	return('A');
+} 	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+float product(float a, float b, float c);
+
+int main()
+{
+	float a,x,y,z;
+
+	printf("Type three numbers, separated by spaces: ");
+	scanf("%f %f %f",&x,&y,&z);
+	a = product(x,y,z);
+	printf("%f * %f * %f = %f\n",x,y,z,a);
+
+	return(0);
+}
+
+float product(float a, float b, float c)
+{
+	float p;
+
+	p = a * b * c;
+	return(p);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int max(int x, int y);
+void isLarger(int big);
+
+int main()
+{
+	int a,b,larger;
+
+	printf("Type two integers separated by a space: ");
+	scanf("%d %d",&a,&b);
+	larger = max(a,b);
+	if(a == larger)
+		isLarger(a);
+	else
+		isLarger(b);
+
+	return(0);
+}
+	
+int max(int x, int y)
+{
+	if( x > y)
+		return(x);
+	return(y);
+}
+
+void isLarger(int big)
+{
+	printf("Value %d is larger.\n",big);
+}        	
+										        </code></pre>
+										    </div>
+
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        15.- Character Manipulation
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;ctype.h>
+
+int main()
+{
+	int ch = 'a';
+
+	printf("Big %c\n",toupper(ch));
+	printf("Little %c\n",tolower(ch));
+	printf("What begins with %c?\n",ch);
+
+	return(0);
+}	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;ctype.h>
+
+int main()
+{
+	int c;
+
+	do
+	{
+		c = getchar();
+		c = toupper(c);
+		putchar(c);
+	}
+	while( c != '\n');
+
+	return(0);
+} 	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;ctype.h>
+
+int main()
+{
+	int acter;
+
+	do
+	{
+		acter = getchar();
+		if(isalpha(acter))
+			putchar(acter);
+	}
+	while( acter != '\n');
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int iscaps(int ch);
+
+int main()
+{
+	int c;
+
+	do
+	{
+		c = getchar();
+		if(iscaps(c))
+            putchar(c);
+	}
+	while( c != '\n');
+
+	return(0);
+}
+
+int iscaps(int ch)
+{
+	if( ch < 'A' || ch > 'Z')
+		return(0);
+	else
+		return(1);
+}
+										        </code></pre>
+										    </div>
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        16.- Strings Manipulation
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;string.h>
+
+int main()
+{
+	char string[] = "Just how long am I?";
+	int len;
+
+	len = strlen(string);
+	printf("The following string:\n");
+	puts(string);
+	printf("is %d characters long.\n",len);
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;stdio.h>
+
+int main()
+{
+	char input[64];		/* 63 characters plus null */
+	int len;
+
+	printf("Instructions: ");
+	fgets(input,64,stdin);
+	len = strlen(input);
+	printf("You typed %d characters of instructions.\n",len);
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	char first[] = "I would like to go ";
+	char second[] = "from here to there\n";
+	char storage[64];
+
+	strcpy(storage, first);
+	strcat(storage, second);
+	printf("Here is your string:\n%s", storage);
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;string.h>
+
+int main()
+{
+	char password[9];
+	int compare;
+
+	printf("Enter your password: ");
+	scanf("%8s",password);
+	compare = strcmp(password,"secret");
+	if( compare == 0 )
+		puts("You've been granted access!");
+	else
+		puts("Intruder alert!");
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;string.h>
+
+int main()
+{
+	char source_string[] = "I am a stranger in a strange land";
+	char find_me[] = "strange";
+
+	if( strstr(source_string,find_me) == NULL)
+		puts("String not found!");
+	else
+		printf("Found '%s' in '%s'\n",find_me,source_string);
+
+	return(0);
+}
+										        </code></pre>
+										    </div>
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        17.- Constants and Placeholders
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#include &lt;time.h>
+
+#define ROWS 10
+#define COLUMNS 10
+
+int main()
+{
+	int row,column;
+
+	srand((unsigned)time(NULL));
+
+	for(row=0;row&lt;ROWS;row++)
+	{
+		for(column=0;column&lt;COLUMNS;column++)
+			printf("%2d\t",rand() % 100);			// %2d is for showing the numbers in the second digit
+		putchar('\n');
+	}
+
+	return(0);
+} 	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+#define INPUT_MAX 64
+
+int main()
+{
+	char input[INPUT_MAX];
+
+	printf("Instructions: ");
+	fgets(input,INPUT_MAX,stdin);
+	puts("Thank you! Here are your instructions:");
+	puts(input);
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	float a;
+    float b = 5.0;
+
+	printf("Input a number: ");
+	scanf("%f",&a);
+	printf("%.1f / %.1f = %.1f\n",a,b,a/b);
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	char right[] = "right";
+	char left[] = "left";
+
+	printf("%20s\n",right);		// 20 spaces before text
+	printf("%-20s\n",left);		// 20 spaces after the text
+
+	return(0);
+}
+										        </code></pre>
+										    </div>
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        18.- Arrays
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	float temps[4] = { 84.9, 83.7, 85.8, 88.2 };
+	int x;
+
+	printf("Local temperatures:\n");
+	for(x=0;x&lt;4;x++)
+		printf("Station %d: %.1f\n",x,temps[x]);
+
+	return(0);
+}										        	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+#define MEALS 3
+
+int main()
+{
+	int calories[MEALS];
+	int x,total;
+
+	total = 0;				/* initialize total */
+	puts("Calorie Counter");
+	for(x=0;x&lt;MEALS;x++)
+	{
+		printf("Calories at meal %d: ",x+1);
+		scanf("%d",&calories[x]);
+		total = total + calories[x];
+	}
+	printf("You had a total of %d calories.\n",total);
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	char text[] = "I am a string!"; // Strings are character arrays
+
+	puts(text);
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	char text[] = {
+	   	'I', ' ', 'a', 'm', ' ', 'a', ' ',
+		's', 't', 'r', 'i', 'n', 'g', '!', '\0' // Null character
+	};
+
+	puts(text);
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	char hello[] = "Greetings, human!\n";
+	int n;
+
+	n = 0;
+	while( hello[n] != '\0')
+	{
+		putchar(hello[n]);
+		n++;
+	}
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	char hello[] = "Greetings, human!\n";
+	int n;
+
+	n = 0;
+	while( putchar(hello[n++]) )	/* ugly, huh? But it works! */
+		;							/* This is common in C when an
+									  empty statement belongs to
+   									  a loop or `if` decision. It
+									  shows that the empty statement
+									  is intentional.
+									 */
+
+	return(0);
+}
+										        </code></pre>
+										    </div>
+
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        19.- Multidimensional Arrays
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+#define ROWS 4
+#define COLUMNS 4
+
+int main()
+{
+	int grid[ROWS][COLUMNS];
+	int x,y;
+
+	/* initialize the array */
+	for(x=0;x&lt;ROWS;x++)
+		for(y=0;y&lt;COLUMNS;y++)
+			grid[x][y] = 0;
+
+	/* display the grid */
+	for(x=0;x&lt;ROWS;x++)
+	{
+		for(y=0;y&lt;COLUMNS;y++)
+			printf("%d.%d: %d\t",x,y,grid[x][y]);
+		putchar('\n');
+	}
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	char names[4][7] = {
+		"Mickey",
+		"Minnie",
+		"Goofy",
+		"Pluto"
+	};
+	int x;
+
+	for(x=0;x&lt;4;x++)
+		printf("%s\n",names[x]);
+
+	return(0);
+}
+										        </code></pre>
+										    </div>
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        20.- Understanding Structures
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	struct record {
+		int account;
+		float balance;
+	};
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	struct person {
+		char name[32];
+		int age;
+	};
+	struct person president = {
+		"George Washington",
+		67
+	};
+
+	printf("%s was %d years old\n",president.name,president.age);
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	struct person {
+		char name[32];
+		int age;
+	};
+	struct person president;
+   
+	president.name = "George Washington";
+	president.age = 67;
+
+	printf("%s was %d years old\n",president.name,president.age);
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;string.h>
+
+int main()
+{
+	struct date {
+		int year;
+		int month;
+		int day;
+	};
+	struct person {
+		char name[32];
+		struct date birthday;
+	};
+	struct person friend;
+
+	strcpy(friend.name,"Anita Mann");
+	friend.birthday.year = 1975;
+	friend.birthday.month = 6;
+	friend.birthday.day = 1;
+
+	printf("My friend %s was born on %d/%d/%d\n",
+			friend.name,
+			friend.birthday.month,
+			friend.birthday.day,
+			friend.birthday.year);
+
+	return(0);
+}
+										        </code></pre>
+										    </div>
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        21.- Time Functions
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;time.h>
+
+int main()
+{
+	time_t now;
+
+	time(&now);										// Use it instead of time(NULL)
+	printf("The current time is %ld\n",time(NULL)); // %ld long integer value
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;time.h>
+
+int main()
+{
+	time_t now;
+	struct tm *right_now;
+
+	time(&now);
+	right_now = localtime(&now);
+	printf("Today is %d/%d at %d:%d\n",
+			right_now->tm_mon,
+			right_now->tm_mday,
+			right_now->tm_hour,
+			right_now->tm_min );
+
+	return(0);
+}
+										        </code></pre>
+										    </div>
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        22.- Understanding Variables
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int a;
+
+	printf("The value of a is %d\n",a);
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int a;
+
+	printf("An int variable occupies %lu bytes of storage\n",sizeof(a));
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int a;
+	char b;
+	float c;
+
+	puts("Memory locations:");
+	printf("A is at %p\n",&a);
+	printf("B is at %p\n",&b);
+	printf("C is at %p\n",&c);
+
+	return(0);
+}
+										        </code></pre>
+										    </div>
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        23.- Variables with Pointers
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int pokey;
+
+	printf("The address of `pokey` is %p\n",&pokey);
+
+	return(0);
+}	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int pokey;
+	int *p;
+
+	pokey = 987;
+	p = &pokey;
+	
+	printf("The address of `pokey` is %p\n",&pokey);
+	printf("The contents of `pokey` are %d\n",pokey);
+
+	printf("The address of `pokey` is %p\n",p);
+	printf("The contents of `pokey` are %d\n",*p);
+
+	return(0);
+}
+										        </code></pre>
+										    </div>
+
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        24.- Arrays with Pointers
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int array[] = { 11, 13, 17, 19 };
+	int x;
+
+	for(x=0;x&lt;4;x++)
+	{
+		printf("Element %d: %d\n",x+1,array[x]);
+	}
+
+	return(0);
+}										        	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	int array[] = { 11, 13, 17, 19 };
+	int x;
+	int *aptr;
+
+	aptr = array;		/* no & needed for an array */
+
+	for(x=0;x&lt;4;x++)
+	{
+		printf("Element %d: %d\n",x+1,*aptr);
+		aptr++;
+	}
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	char *string = "I'm just a normal string.\n";
+
+	puts(string);
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	char *string = "I'm just a normal string.\n";
+	int x = 0;
+
+	while(string[x])
+	{
+		putchar(string[x]);
+		x++;
+	}
+
+	return(0);
+}
+										        </code></pre>
+										    </div>
+
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        25.- Pointers Functions
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+void minus10(int *v);
+
+int main()
+{
+	int value = 100;
+
+	printf("Value is %d\n",value);
+	minus10(&value);
+	printf("Value is %d\n",value);
+
+	return(0);
+}
+
+void minus10(int *v)
+{
+	*v = *v - 10;
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;string.h>
+
+char *longer(char *s1, char *s2);
+
+int main()
+{
+	char *string1 = "A long time ago";
+	char *string2 = "In a galaxy far, far away";
+	char *result;
+
+	result = longer(string1,string2);
+	printf("String '%s' is longer.\n",result);
+
+	return(0);
+}
+
+char *longer(char *s1, char *s2)
+{
+	int len1,len2;
+
+	len1 = strlen(s1);
+	len2 = strlen(s2);
+
+	if( len1 > len2 )
+		return(s1);
+	else
+		return(s2);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;ctype.h>
+
+void shouting(char *input);
+
+int main()
+{
+	char string[64];
+
+	printf("Type some text: ");
+	fgets(string,64,stdin);
+	printf("You typed:\n%s\n",string);
+	shouting(string);
+	printf("If you were shouting, you'd typed:\n%s\n",string);
+
+	return(0);
+}
+
+void shouting(char *input)
+{
+	while(*input)
+	{
+		*input = toupper(*input);
+		input++;
+	}
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;ctype.h>
+
+char *encrypt(char *input);
+
+int main()
+{
+	char *instructions = "Deliver the package to Berlin";
+
+	printf("Here are your secret instructions:\n%s\n",encrypt(instructions));
+
+	return(0);
+}
+
+char *encrypt(char *input)
+{
+	char output[64];
+	int x = 0;
+
+	while(*input)
+	{
+		if(isalpha(*input))
+			output[x] = *input + 1;
+		else
+			output[x] = *input;
+		x++;
+		input++;
+	}
+
+	return(output);
+}	
+										        </code></pre>
+										    </div>
+
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        26.- Pointer Arrays
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	char *gang[5] = {
+		"Spanky",
+		"Buckwheat",
+		"Alfalfa",
+		"Darla",
+		"Pete the Pup"
+	};
+	int x;
+
+	for(x=0;x&lt;5;x++)
+		printf("%s\n",gang[x]);
+
+	return(0);
+}
+										        	
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	char *gang[5] = {
+		"Spanky",
+		"Buckwheat",
+		"Alfalfa",
+		"Darla",
+		"Pete the Pup"
+	};
+	int x;
+	char *cptr;
+
+	for(x=0;x&lt;5;x++)
+	{
+		cptr = gang[x];
+		while(*cptr)
+		{
+			putchar(*cptr);
+			cptr++;
+		}
+		putchar('\n');
+	}
+
+	return(0);
+}
+										        </code></pre>
+										    </div>
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        27.- Allocating Memory
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main()
+{
+	char c;
+	int i;
+	float f;
+	char buffer[128];
+	long unsigned total;
+
+	total = 0;
+	total = total + sizeof(c);
+	total = total + sizeof(i);
+	total = total + sizeof(f);
+	total = total + sizeof(buffer);
+	total = total + sizeof(total);
+
+	printf("This program set aside %ld bytes of storage.\n",total);
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+
+#define SIZE 1024
+
+int main()
+{
+	char *sto;
+
+	sto = malloc(sizeof(char)*SIZE);
+	if( sto == NULL)
+	{
+		puts("Memory error");
+		return(1);
+	}
+	else
+	{
+		printf("%d bytes of memory allocated at %p\n",SIZE,sto);
+	}
+
+	return(0);
+}
+										        </code></pre>
+										    </div>
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        28.- Structures with Structures
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+
+int main()
+{
+	struct date {
+		int month;
+		int day;
+		int year;
+	};
+	struct date *birthday;
+
+	birthday = (struct date *)malloc(sizeof(struct date));
+	if( birthday == NULL)
+	{
+		puts("Memory unavailable");
+		return(1);
+	}
+
+	printf("Enter your birth year: ");
+	scanf("%d",&birthday->year);
+	printf("Enter your birth month: ");
+	scanf("%d",&birthday->month);
+	printf("Enter your birth day: ");
+	scanf("%d",&birthday->day);
+
+	printf("You were born on %d/%d/%d\n",
+			birthday->month,
+			birthday->day,
+			birthday->year);
+
+	return(0);
+}
+										        </code></pre>
+										    </div>
+
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        29.- Linked List
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+
+int main()
+{
+	struct stats {
+		int account;
+		float balance;
+	};
+	struct stats *first;
+	int a = 1;
+
+	/* create new structure */
+	first = (struct stats *)malloc(sizeof(struct stats));
+	if( first == NULL)
+	{
+		puts("Memory error");
+		return(1);
+	}
+
+	/* fill the structure */
+	first->account = a;
+	printf("Account %05d, enter the balance: $",first->account);
+	scanf("%f",&first->balance);
+
+    /* display the structure */
+	printf("Account %05d\tBalance: %.2f\n",
+			first->account,
+			first->balance);
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+
+int main()
+{
+	struct stats {
+		int account;
+		float balance;
+		struct stats *next;
+	};
+	struct stats *first;
+	int a = 1;
+
+	/* create new structure */
+	first = (struct stats *)malloc(sizeof(struct stats));
+	if( first == NULL)
+	{
+		puts("Memory error");
+		return(1);
+	}
+
+	/* fill the structure */
+	first->account = a;
+	printf("Account %05d, enter the balance: $",first->account);
+	scanf("%f",&first->balance);
+	first->next = (struct stats *)malloc(sizeof(struct stats));
+	if( first->next == NULL)
+	{
+		puts("Memory error");
+		return(1);
+	}
+
+	/* display the structure */
+	printf("Account %05d\tBalance: %.2f\n",
+			first->account,
+			first->balance);
+
+	return(0);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+
+struct stats {
+	int account;
+	float balance;
+	struct stats *next;
+};
+
+struct stats *create(void);
+
+int main()
+{
+	struct stats *first;
+	struct stats *current;
+	struct stats *new;		/* Change name if necessary */
+	int a = 1;
+
+	/* create first structure */
+	first = create();
+
+	return(0);
+}
+
+/* Allocate storage for one new structure */
+struct stats *create(void)
+{
+	struct stats *baby;
+
+	baby = (struct stats *)malloc(sizeof(struct stats));
+	if( baby == NULL)
+	{
+		puts("Memory error");
+		exit(1);
+	}
+	return(baby);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+
+struct stats {
+	int account;
+	float balance;
+	struct stats *next;
+};
+
+void fill_structure(struct stats *s);
+struct stats *create(void);
+
+int main()
+{
+	struct stats *first;
+	struct stats *current;
+	struct stats *new;		/* Change name if necessary */
+
+	/* create first structure */
+	first = create();
+	current = first;
+
+	fill_structure(current);
+
+	return(0);
+}
+
+/* Fill a structure */
+void fill_structure(struct stats *s)
+{
+	printf("Account number: ");
+	scanf("%d",&s->account);
+	printf("Balance: $");
+	scanf("%f",&s->balance);
+	s->next = NULL;
+}
+
+/* Allocate storage for one new structure */
+struct stats *create(void)
+{
+	struct stats *baby;
+
+	baby = (struct stats *)malloc(sizeof(struct stats));
+	if( baby == NULL)
+	{
+		puts("Memory error");
+		exit(1);
+	}
+	return(baby);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+
+struct stats {
+	int account;
+	float balance;
+	struct stats *next;
+};
+
+void fill_structure(struct stats *s);
+struct stats *create(void);
+
+int main()
+{
+	struct stats *first;
+	struct stats *current;
+	struct stats *new;		/* Change name if necessary */
+	int x;
+
+	/* create first structure */
+	first = create();
+	current = first;
+
+	for(x=0;x&lt;5;x++)
+	{
+	    if(x==0)
+        {
+
+            first = create();
+            current = first;
+        }
+        else
+        {
+            new = create();
+            current->next = new;
+            current = new;
+        }
+		fill_structure(current);
+	}
+
+	return(0);
+}
+
+/* Fill a structure */
+void fill_structure(struct stats *s)
+{
+	printf("Account number: ");
+	scanf("%d",&s->account);
+	printf("Balance: $");
+	scanf("%f",&s->balance);
+	s->next = NULL;
+}
+
+/* Allocate storage for one new structure */
+struct stats *create(void)
+{
+	struct stats *baby;
+
+	baby = (struct stats *)malloc(sizeof(struct stats));
+	if( baby == NULL)
+	{
+		puts("Memory error");
+		exit(1);
+	}
+	return(baby);
+}
+										        </code></pre>
+										        <pre><code class="language-c">
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+
+struct stats {
+	int account;
+	float balance;
+	struct stats *next;
+};
+
+void fill_structure(struct stats *s);
+struct stats *create(void);
+
+int main()
+{
+	struct stats *first;
+	struct stats *current;
+	struct stats *new;		/* Change name if necessary */
+	int x = 5;
+
+	/* create first structure */
+	first = create();
+	current = first;
+
+	for(x=0;x&lt;5;x++)
+	{
+	    if(x==0)
+        {
+
+            first = create();
+            current = first;
+        }
+        else
+        {
+            new = create();
+            current->next = new;
+            current = new;
+        }
+		fill_structure(current);
+	}
+	current->next = NULL;
+
+	current = first;		/* reset the list */
+	while(current)
+	{
+		printf("Account %05d:\t$%.2f\n",
+				current->account,
+				current->balance);
+		current = current->next;
+	}
+
+	return(0);
+}
+
+/* Fill a structure */
+void fill_structure(struct stats *s)
+{
+	printf("Account number: ");
+	scanf("%d",&s->account);
+	printf("Balance: $");
+	scanf("%f",&s->balance);
+	s->next = NULL;
+}
+
+/* Allocate storage for one new structure */
+struct stats *create(void)
+{
+	struct stats *baby;
+
+	baby = (struct stats *)malloc(sizeof(struct stats));
+	if( baby == NULL)
+	{
+		puts("Memory error");
+		exit(1);
+	}
+	return(baby);
+}
+										        </code></pre>
+										        <br><br><br>
+										    </div>
+										</div><!-- END ACCORDION-->
+							  </div>
+							</div>
+							<div id="menu1" class="tab-pane fade">
+							  <h3>Design Patterns</h3>
+							  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							</div>
+							<div id="menu2" class="tab-pane fade">
+							  <h3>Compilation</h3>
+							  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+							</div>
+							<div id="menu3" class="tab-pane fade">
+							  <h3>Projects</h3>
+							  <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+							</div>
+							</div>
+						</div>
+					</div><!-- /st-content-inner -->
+				</div><!-- /st-content -->
+			</div><!-- /st-pusher -->
+		</div><!-- /st-container -->
+		<script type="text/javascript" src="../js/bootstrap.js"></script>
+		<script type="text/javascript" src="../js/prism.js"></script>
+		<script src="../js/classie.js"></script>
+		<script src="../js/sidebarEffects.js"></script>
+		<script type="text/javascript" src="../js/script.js"></script>
+
+	</body>
+</html>

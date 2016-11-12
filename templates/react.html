@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Sidebar Transitions</title>
+		<meta name="description" content="Sidebar Transitions: Transition effects for off-canvas views" />
+		<meta name="keywords" content="transition, off-canvas, navigation, effect, 3d, css3, smooth" />
+		<meta name="author" content="Codrops" />
+		<script src="../js/modernizr.custom.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="../css/icons.css" />
+		<link rel="stylesheet" type="text/css" href="../css/component.css" />
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/prism.css"/>
+</head>
+	<body>
+		<div id="st-container" class="st-container">
+			<!-- 	
+				example menus 
+				these menus will be on top of the push wrapper
+			-->
+			
+			<nav class="st-menu st-effect-11" id="menu-11">
+				<h2 class="icon icon-lab">Languages<br/>and Frameworks</h2>
+				<ul>
+					<li><a href="../templates/c.html">C</a></li>
+					<li><a href="../templates/c++.html">C++</a></li>
+					<li><a href="../templates/python.html">Python</a></li>
+					<li><a href="../templates/djangoflask.html">Django & Flask</a></li>
+					<li><a href="../templates/javascript.html">Javascript</a></li>
+					<li><a href="../templates/angular.html">Angular.js</a></li>
+					<li><a href="../templates/react.html">React.js</a></li>
+					<li><a href="../templates/d3.html">D3.js</a></li>
+					<li><a href="../templates/dc.html">DC.js</a></li>
+					<li><a href="../templates/node.html">Node.js</a></li>
+					<li><a href="../templates/network.html">Mac OS X</a></li>
+					<li><a href="../templates/css.html">CSS</a></li>
+				</ul>
+			</nav>
+
+			
+
+			<!-- content push wrapper -->
+			<div class="st-pusher">
+				<!-- 	
+					example menus 
+					these menus will be under the push wrapper
+				-->
+				<div class="st-content"><!-- this is the wrapper for the content -->
+					<div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+						<!-- Top Navigation -->
+						<div class="codrops-top topbar">
+							<div id="st-trigger-effects"><button data-effect="st-effect-11">Menu</button></div>
+							<nav class="center">
+								<ul class="nav nav-tabs">
+									<li class="active"><a data-toggle="tab" href="#home">Syntax</a></li>
+									<li><a data-toggle="tab" href="#menu1">Design Patterns</a></li>
+									<li><a data-toggle="tab" href="#menu2">Compilation</a></li>
+									<li><a data-toggle="tab" href="#menu3">Projects</a></li>
+								</ul>
+							</nav>
+						</div><!-- /main -->
+
+						<div class="container">
+							<h2>React.js</h2>
+							
+
+							<div class="tab-content">
+							<div id="home" class="tab-pane fade in active">
+							  <h3>Syntax</h3>
+							  <div>
+							  	  		<p class="accordion-expand-holder">
+										    <a class="accordion-expand-all" href="#">Expand all</a>
+										</p>
+										<div id="accordion" class="ui-accordion ui-widget ui-helper-reset">
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        1.- CDN
+										    </h3>
+										    <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-html">
+&lt;script src="https://fb.me/react-15.1.0.js">&lt;/script>
+&lt;script src="https://fb.me/react-dom-15.1.0.js">&lt;/script>
+&lt;script src="https://fb.me/react-with-addons-15.1.0.js">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js">&lt;/script>
+
+
+&lt;script type="text/babel">
+&lt;/script>
+													</code></pre>
+													<p>Or</p>
+													<pre><code class="language-html">
+&lt;script src="https://npmcdn.com/react@15.3.1/dist/react.js">&lt;/script>
+&lt;script src="https://npmcdn.com/react-dom@15.3.1/dist/react-dom.js">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js">&lt;/script>
+													</code></pre>
+										    </div>
+										        <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        2.- First component
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-javascript">
+<script>
+function App() {
+	return (
+		<div className="scoreboard">
+			<div className="header">
+				<h1>Scoreboard</h1>
+			</div>	
+
+			<div className="players">
+				<div className="player">
+					<div className="player-name">
+						Name1
+					</div>
+					<div className="player-score">
+						<div className="counter">
+							<button className="counter-action decrement"> - </button>
+							<div className="counter-score"> 7 </div>
+							<button className="counter-action increment"> + </button>
+						</div>
+					</div>
+				</div>
+
+				<div className="player">
+					<div className="player-name">
+						Name1
+					</div>
+					<div className="player-score">
+						<div className="counter">
+							<button className="counter-action decrement"> - </button>
+							<div className="counter-score"> 8 </div>
+							<button className="counter-action increment"> + </button>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+
+		
+	)
+}
+
+ReactDOM.render(<App />, document.getElementById('container'));
+</script>
+												</code></pre>
+										    </div>
+										        <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        3.- Props
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-javascript">
+<script>
+function App() {
+	return (
+		<div className="scoreboard">
+			<div className="header">
+				<h1>Scoreboard</h1>
+			</div>	
+
+			<div className="players">
+				<div className="player">
+					<div className="player-name">
+						Name1
+					</div>
+					<div className="player-score">
+						<div className="counter">
+							<button className="counter-action decrement"> - </button>
+							<div className="counter-score"> 7 </div>
+							<button className="counter-action increment"> + </button>
+						</div>
+					</div>
+				</div>
+
+				<div className="player">
+					<div className="player-name">
+						Name1
+					</div>
+					<div className="player-score">
+						<div className="counter">
+							<button className="counter-action decrement"> - </button>
+							<div className="counter-score"> 8 </div>
+							<button className="counter-action increment"> + </button>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+
+		
+	)
+}
+
+ReactDOM.render(<App />, document.getElementById('container'));
+</script>
+										        </code></pre>
+										    </div>
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        4.- Props Prototype
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-javascript">
+<script type="text/babel">
+	function App(props) {
+		return (
+			<div className="scoreboard">
+				<div className="header">
+					<h1>{props.title}</h1>
+				</div>	
+
+				<div className="players">
+					<div className="player">
+						<div className="player-name">
+							Name1
+						</div>
+						<div className="player-score">
+							<div className="counter">
+								<button className="counter-action decrement"> - </button>
+								<div className="counter-score"> 7 </div>
+								<button className="counter-action increment"> + </button>
+							</div>
+						</div>
+					</div>
+
+					<div className="player">
+						<div className="player-name">
+							Name1
+						</div>
+						<div className="player-score">
+							<div className="counter">
+								<button className="counter-action decrement"> - </button>
+								<div className="counter-score"> 8 </div>
+								<button className="counter-action increment"> + </button>
+							</div>
+						</div>
+					</div>
+				</div>			
+			</div>
+
+			
+		)
+	}
+
+	App.propTypes = {
+		title: React.PropTypes.String,
+	};
+
+	ReactDOM.render(<App title={3} />,
+</script>									        	
+										        </code></pre>
+										    </div>
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        5.- Default Prototype Props
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-javascript">
+
+<script type="text/babel">
+function App(props) {
+	return (
+		<div className="scoreboard">
+			<div className="header">
+				<h1>{props.title}</h1>
+			</div>	
+
+			<div className="players">
+				<div className="player">
+					<div className="player-name">
+						Name1
+					</div>
+					<div className="player-score">
+						<div className="counter">
+							<button className="counter-action decrement"> - </button>
+							<div className="counter-score"> 7 </div>
+							<button className="counter-action increment"> + </button>
+						</div>
+					</div>
+				</div>
+
+				<div className="player">
+					<div className="player-name">
+						Name1
+					</div>
+					<div className="player-score">
+						<div className="counter">
+							<button className="counter-action decrement"> - </button>
+							<div className="counter-score"> 8 </div>
+							<button className="counter-action increment"> + </button>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+
+		
+	)
+}
+
+App.propTypes = {
+	title: React.PropTypes.String,
+};
+
+App.defaultProps = {
+	title: "Scoreboard",
+}
+
+ReactDOM.render(<App />, document.getElementById('container'));	
+</script>								        	
+										        </code></pre>
+										    </div>
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        6.- Decomposing
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-javascript">
+<script type="text/babel">
+function Header(props) {
+	return (
+		<div className="header">
+			<h1>{props.title}</h1>
+		</div>
+	)
+}
+
+Header.propTypes = {
+	title: React.PropTypes.String(.isRequired),
+};
+
+
+function App(props) {
+	return (
+		<div className="scoreboard">
+			<Header title={props.title} />
+
+			<div className="players">
+				<div className="player">
+					<div className="player-name">
+						Name1
+					</div>
+					<div className="player-score">
+						<div className="counter">
+							<button className="counter-action decrement"> - </button>
+							<div className="counter-score"> 7 </div>
+							<button className="counter-action increment"> + </button>
+						</div>
+					</div>
+				</div>
+
+				<div className="player">
+					<div className="player-name">
+						Name1
+					</div>
+					<div className="player-score">
+						<div className="counter">
+							<button className="counter-action decrement"> - </button>
+							<div className="counter-score"> 8 </div>
+							<button className="counter-action increment"> + </button>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+
+		
+	)
+}
+
+App.propTypes = {
+	title: React.PropTypes.String,
+};
+
+App.defaultProps = {
+	title: "Scoreboard",
+}
+
+ReactDOM.render(<App />, document.getElementById('container'));
+
+</script>										        	
+										        </code></pre>
+										    </div>
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        7.- Decomposing Components
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-javascript">
+<script type="text/babel">
+function Header(props) {
+	return (
+		<div className="header">
+			<h1>{props.title}</h1>
+		</div>
+	)
+}
+
+Header.propTypes = {
+	title: React.PropTypes.String,
+};
+
+function Counter(props) {
+	return (
+		<div className="counter">
+			<button className="counter-action decrement"> - </button>
+			<div className="counter-score"> {props.score} </div>
+			<button className="counter-action increment"> + </button>
+		</div>
+	)
+}
+
+Counter.propTypes = {
+	score: React.PropTypes.Number
+};
+
+function Player(props) {
+	return (
+		<div className="player">
+			<div className="player-name">
+				{props.name}
+			</div>
+			<div className="player-score">
+				<Counter score={props.score} />
+			</div>
+		</div>
+	)
+}
+
+Player.prototype = {
+	name: React.PropTypes.String,		
+}
+
+
+function App(props) {
+	return (
+		<div className="scoreboard">
+			<Header title={props.title} />
+
+			<div className="players">
+				<Player name="name1" score={7} />
+				<Player name="name2" score={9} />
+			</div>			
+		</div>
+
+		
+	)
+}
+
+App.propTypes = {
+	title: React.PropTypes.String,
+};
+
+App.defaultProps = {
+	title: "Scoreboard",
+}
+
+ReactDOM.render(<App />, document.getElementById('container'));
+
+</script>										        	
+										        </code></pre>
+										    </div>
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        8.- Loops and Keys
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-javascript">
+<script type="text/babel">
+var PLAYERS = [
+	{
+		name: "Name1",
+		score: "1",
+		id: 1			
+	},
+	{
+		name: "Name2",
+		score: "1",
+		id: 2
+	},
+	{
+		name: "Name3",
+		score: "2",
+		id: 3
+	},
+	{
+		name: "Name4",
+		score: "3",
+		id: 4
+	}
+]
+
+
+function Header(props) {
+	return (
+		<div className="header">
+			<h1>{props.title}</h1>
+		</div>
+	)
+}
+
+Header.propTypes = {
+	title: React.PropTypes.String,
+};
+
+function Counter(props) {
+	return (
+		<div className="counter">
+			<button className="counter-action decrement"> - </button>
+			<div className="counter-score"> {props.score} </div>
+			<button className="counter-action increment"> + </button>
+		</div>
+	)
+}
+
+Counter.propTypes = {
+	score: React.PropTypes.Number
+};
+
+function Player(props) {
+	return (
+		<div className="player">
+			<div className="player-name">
+				{props.name}
+			</div>
+			<div className="player-score">
+				<Counter score={props.score} />
+			</div>
+		</div>
+	)
+}
+
+Player.prototype = {
+	name: React.PropTypes.String,		
+}
+
+
+function App(props) {
+	return (
+		<div className="scoreboard">
+			<Header title={props.title} />
+
+			<div className="players">
+			{props.players.map(function(player){
+				return <Player name={player.name} score={player.score} key={player.id} />
+			})}
+				<Player name="name5" score={7} />
+				<Player name="name6" score={9} />
+			</div>			
+		</div>
+
+		
+	)
+}
+
+App.propTypes = {
+	title: React.PropTypes.String,
+	players: React.PropTypes.arrayOf(React.PropTypes.shape({
+		name: React.PropTypes.string,
+		score: React.PropTypes.number,
+		id: React.PropTypes.number.isRequired
+	})),
+};
+
+App.defaultProps = {
+	title: "Scoreboard",
+}
+
+ReactDOM.render(<App players={PLAYERS} />, document.getElementById('container'));
+
+</script>										        	
+										        </code></pre>
+										    </div>
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        9.- Stateless Functional Component & Component Class (Counter Class)
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-javascript">
+<script type="text/babel">
+var PLAYERS = [
+	{
+		name: "Name1",
+		score: "1",
+		id: 1			
+	},
+	{
+		name: "Name2",
+		score: "1",
+		id: 2
+	},
+	{
+		name: "Name3",
+		score: "2",
+		id: 3
+	},
+	{
+		name: "Name4",
+		score: "3",
+		id: 4
+	}
+]
+
+
+function Header(props) {
+	return (
+		<div className="header">
+			<h1>{props.title}</h1>
+		</div>
+	)
+}
+
+Header.propTypes = {
+	title: React.PropTypes.String,
+};
+
+var Counter = React.createClass({
+	propTypes: {
+		score: React.PropTypes.number.isRequired,
+	},
+
+	render: function(){
+		return (
+			<div className="counter">
+				<button className="counter-action decrement"> - </button>
+				<div className="counter-score"> {this.props.score} </div>
+				<button className="counter-action increment"> + </button>
+			</div>
+		)
+	}
+});
+
+function Player(props) {
+	return (
+		<div className="player">
+			<div className="player-name">
+				{props.name}
+			</div>
+			<div className="player-score">
+				<Counter score={props.score} />
+			</div>
+		</div>
+	)
+}
+
+Player.prototype = {
+	name: React.PropTypes.String,		
+}
+
+
+function App(props) {
+	return (
+		<div className="scoreboard">
+			<Header title={props.title} />
+
+			<div className="players">
+			{props.players.map(function(player){
+				return <Player name={player.name} score={player.score} key={player.id} />
+			})}
+				<Player name="name5" score={7} />
+				<Player name="name6" score={9} />
+			</div>			
+		</div>
+
+		
+	)
+}
+
+App.propTypes = {
+	title: React.PropTypes.String,
+	players: React.PropTypes.arrayOf(React.PropTypes.shape({
+		name: React.PropTypes.string,
+		score: React.PropTypes.number,
+		id: React.PropTypes.number.isRequired
+	})),
+};
+
+App.defaultProps = {
+	title: "Scoreboard",
+}
+
+ReactDOM.render(<App players={PLAYERS} />, document.getElementById('container'));
+
+</script>										        	
+										        </code></pre>
+										    </div>
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        10.- Understanding State for large applications(Redux & Flux(no example))
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-javascript">
+<script type="text/babel">
+var PLAYERS = [
+	{
+		name: "Name1",
+		score: "1",
+		id: 1			
+	},
+	{
+		name: "Name2",
+		score: "1",
+		id: 2
+	},
+	{
+		name: "Name3",
+		score: "2",
+		id: 3
+	},
+	{
+		name: "Name4",
+		score: "3",
+		id: 4
+	}
+]
+
+
+function Header(props) {
+	return (
+		<div className="header">
+			<h1>{props.title}</h1>
+		</div>
+	)
+}
+
+Header.propTypes = {
+	title: React.PropTypes.String,
+};
+
+var Counter = React.createClass({
+	propTypes: {},
+
+	getInitialState: function(){
+		return {
+			score: 0,
+		}
+	},
+
+	render: function(){
+		return (
+			<div className="counter">
+				<button className="counter-action decrement"> - </button>
+				<div className="counter-score"> {this.state.score} </div>
+				<button className="counter-action increment"> + </button>
+			</div>
+		)
+	}
+});
+
+function Player(props) {
+	return (
+		<div className="player">
+			<div className="player-name">
+				{props.name}
+			</div>
+			<div className="player-score">
+				<Counter/>
+			</div>
+		</div>
+	)
+}
+
+Player.prototype = {
+	name: React.PropTypes.String,		
+}
+
+
+function App(props) {
+	return (
+		<div className="scoreboard">
+			<Header title={props.title} />
+
+			<div className="players">
+			{props.players.map(function(player){
+				return <Player name={player.name} score={player.score} key={player.id} />
+			})}
+				<Player name="name5" score={7} />
+				<Player name="name6" score={9} />
+			</div>			
+		</div>
+
+		
+	)
+}
+
+App.propTypes = {
+	title: React.PropTypes.String,
+	players: React.PropTypes.arrayOf(React.PropTypes.shape({
+		name: React.PropTypes.string,
+		score: React.PropTypes.number,
+		id: React.PropTypes.number.isRequired
+	})),
+};
+
+App.defaultProps = {
+	title: "Scoreboard",
+}
+
+ReactDOM.render(<App players={PLAYERS} />, document.getElementById('container'));
+
+</script>										        	
+										        </code></pre>
+										    </div>
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        11.- Updating State
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-javascript">
+	<script type="text/babel">
+	var PLAYERS = [
+		{
+			name: "Name1",
+			score: 1,
+			id: 1			
+		},
+		{
+			name: "Name2",
+			score: 1,
+			id: 2
+		},
+		{
+			name: "Name3",
+			score: 2,
+			id: 3
+		},
+		{
+			name: "Name4",
+			score: 3,
+			id: 4
+		}
+	]
+
+
+	function Header(props) {
+		return (
+			<div className="header">
+				<h1>{props.title}</h1>
+			</div>
+		)
+	}
+
+	Header.propTypes = {
+		title: React.PropTypes.String,
+	};
+
+	var Counter = React.createClass({
+		propTypes: {
+			initialScore: React.PropTypes.number.isRequired,
+		},
+
+		getInitialState: function(){
+			return {
+				score: this.props.initialScore,
+			}
+		},
+
+		incrementScore: function(e){
+			this.setState({
+				score: (this.state.score + 1),
+			})
+		},
+
+		decrementScore: function(){
+			this.setState({
+				score:(this.state.score - 1),
+			})
+		},
+
+		render: function(){
+			return (
+				<div className="counter">
+					<button className="counter-action decrement" onClick={this.decrementScore}> - </button>
+					<div className="counter-score"> {this.state.score} </div>
+					<button className="counter-action increment" onClick={this.incrementScore}> + </button>
+				</div>
+			)
+		}
+	});
+
+	function Player(props) {
+		return (
+			<div className="player">
+				<div className="player-name">
+					{props.name}
+				</div>
+				<div className="player-score">
+					<Counter initialScore={props.score}/>
+				</div>
+			</div>
+		)
+	}
+
+	Player.prototype = {
+		name: React.PropTypes.String,		
+	}
+
+
+	function App(props) {
+		return (
+			<div className="scoreboard">
+				<Header title={props.title} />
+
+				<div className="players">
+				{props.players.map(function(player){
+					return <Player name={player.name} score={player.score} key={player.id} />
+				})}
+					<Player name="name5" score={7} />
+					<Player name="name6" score={9} />
+				</div>			
+			</div>
+
+			
+		)
+	}
+
+	App.propTypes = {
+		title: React.PropTypes.String,
+		players: React.PropTypes.arrayOf(React.PropTypes.shape({
+			name: React.PropTypes.string,
+			score: React.PropTypes.number,
+			id: React.PropTypes.number.isRequired
+		})),
+	};
+
+	App.defaultProps = {
+		title: "Scoreboard",
+	}
+
+	ReactDOM.render(<App players={PLAYERS} />, document.getElementById('container'));
+
+	</script>
+</body>
+</html>										        	
+										        </code></pre>
+										    </div>
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        12.- Unidirectional data flow (Not Working)
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-javascript">
+	<script type="text/babel">
+	var PLAYERS = [
+		{
+			name: "Name1",
+			score: 1,
+			id: 1			
+		},
+		{
+			name: "Name2",
+			score: 1,
+			id: 2
+		},
+		{
+			name: "Name3",
+			score: 2,
+			id: 3
+		},
+		{
+			name: "Name4",
+			score: 3,
+			id: 4
+		}
+	]
+
+
+	function Header(props) {
+		return (
+			<div className="header">
+				<h1>{props.title}</h1>
+			</div>
+		)
+	}
+
+	Header.propTypes = {
+		title: React.PropTypes.String,
+	};
+
+	var Counter = React.createClass({
+		propTypes: {
+			initialScore: React.PropTypes.number.isRequired,
+		},
+
+		getInitialState: function(){
+			return {
+				score: this.props.initialScore,
+			}
+		},
+
+		incrementScore: function(e){
+			this.setState({
+				score: (this.state.score + 1),
+			})
+		},
+
+		decrementScore: function(){
+			this.setState({
+				score:(this.state.score - 1),
+			})
+		},
+
+		onScoreChange: function(index, delta) {
+			console.log('onScoreChange', index, delta);
+			this.state.players[index].score += delta;
+			this.setState(this.state);
+		},
+
+		render: function(props){
+			return (
+				<div className="counter">
+					<button className="counter-action decrement" onClick={function() {props.onChange(-1);}}> - </button>
+					<div className="counter-score"> {this.state.score} </div>
+					<button className="counter-action increment" onClick={function() {props.onChange(1);}}> + </button>
+				</div>
+			)
+		}
+	});
+
+	Counter.propTypes = {
+		score: React.PropTypes.Number,
+		onChange: React.PropTypes.func,
+	};
+
+	function Player(props) {
+		return (
+			<div className="player">
+				<div className="player-name">
+					{props.name}
+				</div>
+				<div className="player-score">
+					<Counter initialScore={props.score} onChange={props.onScoreChange}/>
+				</div>
+			</div>
+		)
+	}
+
+	Player.propTypes = {
+		name: React.PropTypes.String,
+		score: React.PropTypes.number,
+		onScoreChange: React.PropTypes.func,	
+	}
+
+
+	function App(props) {
+		return (
+			<div className="scoreboard">
+				<Header title={props.title} />
+
+				<div className="players">
+				{props.players.map(function(player, index){
+					return (
+						<Player 
+							onScoreChange={function(delta){this.onScoreChange(index,delta)}.bind(this)}
+							name={player.name} 
+							score={player.score} 
+							key={player.id} />
+
+					);
+				}.bind(this))}
+					<Player name="name5" score={7} />
+					<Player name="name6" score={9} />
+				</div>			
+			</div>
+
+			
+		)
+	}
+
+	App.propTypes = {
+		title: React.PropTypes.String,
+		players: React.PropTypes.arrayOf(React.PropTypes.shape({
+			name: React.PropTypes.string,
+			score: React.PropTypes.number,
+			id: React.PropTypes.number.isRequired
+		})),
+	};
+
+	App.defaultProps = {
+		title: "Scoreboard",
+	}
+
+	ReactDOM.render(<App players={PLAYERS} />, document.getElementById('container'));
+
+	</script>
+										        </code></pre>
+										    </div>
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        13.- Reestructuring State
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-javascript">
+										        	
+										        </code></pre>
+										    </div>
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        14.- Communicating Events
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-javascript">
+										        	
+										        </code></pre>
+										    </div>
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        15.- Building the Statistics Component
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-javascript">
+										        	
+										        </code></pre>
+										    </div>
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        16.- Adding players to the scoreboard
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-javascript">
+										        	
+										        </code></pre>
+										    </div>
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        17.- Designing the stopwatch
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-javascript">
+										        	
+										        </code></pre>
+										    </div>
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        18.- Stopwatch State
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-javascript">
+										        	
+										        </code></pre>
+										    </div>
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        19.- Making the Stopwatch click
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-javascript">
+										        	
+										        </code></pre>
+										    </div>
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        20.- Review and next steps
+										    </h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-javascript">
+										        	
+										        </code></pre>
+										    </div>
+										</div>
+							  </div>
+							</div>
+							<div id="menu1" class="tab-pane fade">
+							  <h3>Design Patterns</h3>
+							  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							</div>
+							<div id="menu2" class="tab-pane fade">
+							  <h3>Compilation</h3>
+							  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+							</div>
+							<div id="menu3" class="tab-pane fade">
+							  <h3>Projects</h3>
+							  <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+							</div>
+							</div>
+						</div>
+					</div><!-- /st-content-inner -->
+				</div><!-- /st-content -->
+			</div><!-- /st-pusher -->
+		</div><!-- /st-container -->
+		<script type="text/javascript" src="../js/bootstrap.js"></script>
+		<script type="text/javascript" src="../js/prism.js"></script>
+		<script src="../js/classie.js"></script>
+		<script src="../js/sidebarEffects.js"></script>
+		<script type="text/javascript" src="../js/script.js"></script>
+
+	</body>
+</html>

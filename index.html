@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Sidebar Transitions</title>
+		<meta name="description" content="Sidebar Transitions: Transition effects for off-canvas views" />
+		<meta name="keywords" content="transition, off-canvas, navigation, effect, 3d, css3, smooth" />
+		<meta name="author" content="Codrops" />
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/icons.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"/>
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/jquery.js"></script>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/angular.js"></script>
+</head>
+	<body>
+		<div id="st-container" class="st-container">
+			<!-- 	
+				example menus 
+				these menus will be on top of the push wrapper
+			-->
+			
+			<nav class="st-menu st-effect-11" id="menu-11">
+				<h2 class="icon icon-lab">Languages<br/>and Frameworks</h2>
+				<ul>
+					<li><a href="templates/c.html">C</a></li>
+					<li><a href="templates/c++.html">C++</a></li>
+					<li><a href="templates/python.html">Python</a></li>
+					<li><a href="templates/djangoflask.html">Django & Flask</a></li>
+					<li><a href="templates/javascript.html">Javascript</a></li>
+					<li><a href="templates/angular.html">Angular.js</a></li>
+					<li><a href="templates/react.html">React.js</a></li>
+					<li><a href="templates/d3.html">D3.js</a></li>
+					<li><a href="templates/dc.html">DC.js</a></li>
+					<li><a href="templates/node.html">Node.js</a></li>
+					<li><a href="templates/network.html">Mac OS X</a></li>
+					<li><a href="templates/terminal.html">Local</a></li>
+					<li><a href="templates/css.html">CSS</a></li>
+				</ul>
+			</nav>
+
+			
+
+			<!-- content push wrapper -->
+			<div class="st-pusher">
+				<!-- 	
+					example menus 
+					these menus will be under the push wrapper
+				-->
+				<div class="st-content"><!-- this is the wrapper for the content -->
+					<div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+						<!-- Top Navigation -->
+						<div class="codrops-top topbar">
+							<div id="st-trigger-effects"><button data-effect="st-effect-11">Menu</button></div>
+						</div><!-- /main -->
+
+						<div class="container">		
+							<div class="tab-content">
+								<div class="module-card-wrap">
+								  <div class="module-card">
+								    <div class="module-card-title">Learn C</div>
+								    <div class="module-card-meta">
+								      <div class="module-card-category">
+								        <span class="fa fa-tag"></span>
+								        <span>Syntax, Compilation, Design Patterns, Projects</span>
+								      </div>
+								      <div class="module-card-author">
+								        <span class="fa fa-user"></span>
+								        <span>Rodrigo Muñoz</span>
+								      </div>      
+								    </div> <!-- /module-card-meta -->
+
+								    <div class="module-card-bottom">
+								      <img src="imgs/c.jpg" alt="cheesecake" class="module-card-img" />
+
+								      <div>
+								        <p>C is a low lever programming language. You have to compile it</p>
+								      </div>
+
+								      <a href="templates/c.html" class="module-card-button">See More</a>
+								    </div>
+								  </div>
+
+								  <div class="module-card">
+								    <div class="module-card-title">Learn C++</div>
+								    <div class="module-card-meta">
+								      <div class="module-card-category">
+								        <span class="fa fa-tag"></span>
+								        <span>Syntax, Compilation, Design Patterns, Projects</span>
+								      </div>
+								      <div class="module-card-author">
+								        <span class="fa fa-user"></span>
+								        <span>Rodrigo Muñoz</span>
+								      </div>      
+								    </div> <!-- /module-card-meta -->
+
+								    <div class="module-card-bottom">
+								      <img src="imgs/c++.jpg" alt="cheesecake" class="module-card-img" />
+
+								      <div>
+								        <p>C++ is a low lever programming language. You can make Object Oriented Programming</p>
+								      </div>
+
+								      <a href="templates/c++.html" class="module-card-button">See More</a>
+								    </div>
+								  </div>
+
+								  <div class="module-card">
+								    <div class="module-card-title">Python</div>
+								    <div class="module-card-meta">
+								      <div class="module-card-category">
+								        <span class="fa fa-tag"></span>
+								        <span>Scripting language for Web Development and Data analysis</span>
+								      </div>
+								      <div class="module-card-author">
+								        <span class="fa fa-user"></span>
+								        <span>Rodrigo Muñoz</span>
+								      </div>      
+								    </div> <!-- /module-card-meta -->
+
+								    <div class="module-card-bottom">
+								      <img src="imgs/python.jpeg" alt="cheesecake" class="module-card-img" />
+
+								      <div>
+								        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+								      </div>
+								      <a href="templates/python.html" class="module-card-button">See More</a>
+								    </div>
+								  </div>
+
+								  <div class="module-card">
+								    <div class="module-card-title">Django</div>
+								    <div class="module-card-meta">
+								      <div class="module-card-category">
+								        <span class="fa fa-tag"></span>
+								        <span>Python's Web Framework</span>
+								      </div>
+								      <div class="module-card-author">
+								        <span class="fa fa-user"></span>
+								        <span>Rodrigo Muñoz</span>
+								      </div>      
+								    </div> <!-- /module-card-meta -->
+
+								    <div class="module-card-bottom">
+								      <img src="imgs/django.png" alt="cheesecake" class="module-card-img" />
+
+								      <div>
+								        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ipsum sit perspiciatis iusto commodi nihil tenetur veritatis adipisci sed? Illo nobis similique in facilis libero ab officia ratione nesciunt fugiat.</p>
+								      </div>
+								      <a href="templates/django.html" class="module-card-button">See More</a>
+								    </div>
+								  </div>
+
+								  <div class="module-card">
+								    <div class="module-card-title">Javascript</div>
+								    <div class="module-card-meta">
+								      <div class="module-card-category">
+								        <span class="fa fa-tag"></span>
+								        <span>Web Browser's Programming Language</span>
+								      </div>
+								      <div class="module-card-author">
+								        <span class="fa fa-user"></span>
+								        <span>Rodrigo Muñoz</span>
+								      </div>      
+								    </div> <!-- /module-card-meta -->
+
+								    <div class="module-card-bottom">
+								      <img src="imgs/js.jpg" alt="cheesecake" class="module-card-img" />
+
+								      <div>
+								        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ipsum sit perspiciatis iusto commodi nihil tenetur veritatis adipisci sed? Illo nobis similique in facilis libero ab officia ratione nesciunt fugiat.</p>
+								      </div>
+
+								      <a href="templates/c++.html" class="module-card-button">See More</a>
+								    </div>
+								  </div>
+
+								  <div class="module-card">
+								    <div class="module-card-title">Angular.js</div>
+								    <div class="module-card-meta">
+								      <div class="module-card-category">
+								        <span class="fa fa-tag"></span>
+								        <span>Javascript Web Framework</span>
+								      </div>
+								      <div class="module-card-author">
+								        <span class="fa fa-user"></span>
+								        <span>Rodrigo Muñoz</span>
+								      </div>      
+								    </div> <!-- /module-card-meta -->
+
+								    <div class="module-card-bottom">
+								      <img src="imgs/angular.png" alt="cheesecake" class="module-card-img" />
+
+								      <div>
+								        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ipsum sit perspiciatis iusto commodi nihil tenetur veritatis adipisci sed? Illo nobis similique in facilis libero ab officia ratione nesciunt fugiat.</p>
+								      </div>
+
+								      <a href="templates/javascript.html" class="module-card-button">See More</a>
+								    </div>
+								  </div>
+
+								  <div class="module-card">
+								    <div class="module-card-title">React.js</div>
+								    <div class="module-card-meta">
+								      <div class="module-card-category">
+								        <span class="fa fa-tag"></span>
+								        <span>Javascript Framework for building beautiful UI</span>
+								      </div>
+								      <div class="module-card-author">
+								        <span class="fa fa-user"></span>
+								        <span>Rodrigo Muñoz</span>
+								      </div>      
+								    </div> <!-- /module-card-meta -->
+
+								    <div class="module-card-bottom">
+								      <img src="imgs/react.png" alt="cheesecake" class="module-card-img" />
+
+								      <div>
+								        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ipsum sit perspiciatis iusto commodi nihil tenetur veritatis adipisci sed? Illo nobis similique in facilis libero ab officia ratione nesciunt fugiat.</p>
+								      </div>
+
+								      <a href="templates/react.html" class="module-card-button">See More</a>
+								    </div>
+								  </div>
+
+
+								  <div class="module-card">
+								    <div class="module-card-title">D3.js</div>
+								    <div class="module-card-meta">
+								      <div class="module-card-category">
+								        <span class="fa fa-tag"></span>
+								        <span>Data Visualization</span>
+								      </div>
+								      <div class="module-card-author">
+								        <span class="fa fa-user"></span>
+								        <span>Rodrigo Muñoz</span>
+								      </div>      
+								    </div> <!-- /module-card-meta -->
+
+								    <div class="module-card-bottom">
+								      <img src="imgs/d3.png" alt="cheesecake" class="module-card-img" />
+
+								      <div>
+								        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ipsum sit perspiciatis iusto commodi nihil tenetur veritatis adipisci sed? Illo nobis similique in facilis libero ab officia ratione nesciunt fugiat.</p>
+								      </div>
+
+								      <a href="templates/d3.html" class="module-card-button">See More</a>
+								    </div>
+								  </div>
+
+								  <div class="module-card">
+								    <div class="module-card-title">Dc.js</div>
+								    <div class="module-card-meta">
+								      <div class="module-card-category">
+								        <span class="fa fa-tag"></span>
+								        <span>Data Visualization with user interactivity</span>
+								      </div>
+								      <div class="module-card-author">
+								        <span class="fa fa-user"></span>
+								        <span>Rodrigo Muñoz</span>
+								      </div>      
+								    </div> <!-- /module-card-meta -->
+
+								    <div class="module-card-bottom">
+								      <img src="imgs/dc.png" alt="cheesecake" class="module-card-img" />
+
+								      <div>
+								        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ipsum sit perspiciatis iusto commodi nihil tenetur veritatis adipisci sed? Illo nobis similique in facilis libero ab officia ratione nesciunt fugiat.</p>
+								      </div>
+
+								      <a href="templates/dc.html" class="module-card-button">See More</a>
+								    </div>
+								  </div>
+
+
+								  <div class="module-card">
+								    <div class="module-card-title">Networking</div>
+								    <div class="module-card-meta">
+								      <div class="module-card-category">
+								        <span class="fa fa-tag"></span>
+								        <span>Things you can learn</span>
+								      </div>
+								      <div class="module-card-author">
+								        <span class="fa fa-user"></span>
+								        <span>Rodrigo Muñoz</span>
+								      </div>      
+								    </div> <!-- /module-card-meta -->
+
+								    <div class="module-card-bottom">
+								      <img src="imgs/dc.png" alt="cheesecake" class="module-card-img" />
+
+								      <div>
+								        <p>Keep it cool</p>
+								      </div>
+
+								      <a href="templates/dc.html" class="module-card-button">See More</a>
+								    </div>
+								  </div>
+
+
+								</div> <!-- /module-card-wrap -->
+							</div>
+					</div><!-- /st-content-inner -->
+				</div><!-- /st-content -->
+			</div><!-- /st-pusher -->
+		</div><!-- /st-container -->
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script src="js/classie.js"></script>
+		<script src="js/sidebarEffects.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+
+	</body>
+</html>

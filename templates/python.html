@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Sidebar Transitions</title>
+		<meta name="description" content="Sidebar Transitions: Transition effects for off-canvas views" />
+		<meta name="keywords" content="transition, off-canvas, navigation, effect, 3d, css3, smooth" />
+		<meta name="author" content="Codrops" />
+		<script src="../js/modernizr.custom.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="../css/icons.css" />
+		<link rel="stylesheet" type="text/css" href="../css/component.css" />
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/prism.css"/>
+</head>
+	<body>
+		<div id="st-container" class="st-container">
+			<!-- 	
+				example menus 
+				these menus will be on top of the push wrapper
+			-->
+			
+			<nav class="st-menu st-effect-11" id="menu-11">
+				<h2 class="icon icon-lab">Languages<br/>and Frameworks</h2>
+				<ul>
+					<li><a href="../templates/c.html">C</a></li>
+					<li><a href="../templates/c++.html">C++</a></li>
+					<li><a href="../templates/python.html">Python</a></li>
+					<li><a href="../templates/djangoflask.html">Django & Flask</a></li>
+					<li><a href="../templates/javascript.html">Javascript</a></li>
+					<li><a href="../templates/angular.html">Angular.js</a></li>
+					<li><a href="../templates/react.html">React.js</a></li>
+					<li><a href="../templates/d3.html">D3.js</a></li>
+					<li><a href="../templates/dc.html">DC.js</a></li>
+					<li><a href="../templates/node.html">Node.js</a></li>
+					<li><a href="../templates/network.html">Mac OS X</a></li>
+					<li><a href="../templates/local.html">Local</a></li>
+					<li><a href="../templates/remote.html">Remote</a></li>
+					<li><a href="../templates/css.html">CSS</a></li>
+				</ul>
+			</nav>
+
+			
+
+			<!-- content push wrapper -->
+			<div class="st-pusher">
+				<!-- 	
+					example menus 
+					these menus will be under the push wrapper
+				-->
+				<div class="st-content"><!-- this is the wrapper for the content -->
+					<div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+						<!-- Top Navigation -->
+						<div class="codrops-top topbar">
+							<div id="st-trigger-effects"><button data-effect="st-effect-11">Menu</button></div>
+							<nav class="center">
+								<ul class="nav nav-tabs">
+									<li class="active"><a data-toggle="tab" href="#home">Syntax</a></li>
+									<li><a data-toggle="tab" href="#menu2">Collections</a></li>
+									<li><a data-toggle="tab" href="#menu3">Objects</a></li>
+									<li><a data-toggle="tab" href="#menu4">Functional Programming</a></li>
+									<li><a data-toggle="tab" href="#menu5">Comprehensions</a></li>
+									<li><a data-toggle="tab" href="#menu6">Decorators</a></li>
+									<li><a data-toggle="tab" href="#menu7">Algorytms</a></li>
+								</ul>
+							</nav>
+						</div><!-- /main -->
+
+						<div class="container">
+							<h2>Python Language</h2>
+							
+
+							<div class="tab-content">
+							<div id="home" class="tab-pane fade in active">
+							  <h3>Syntax</h3>
+							  <div>
+							  	  		<p class="accordion-expand-holder">
+										    <a class="accordion-expand-all" href="#">Expand all</a>
+										</p>
+										<div id="accordion" class="ui-accordion ui-widget ui-helper-reset">
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        Numbers
+										    </h3>
+										    <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-python">
+int('5')
+float(2.2)
+int(2.0)
+float(5)
+										        </code></pre>
+										    </div>
+									        <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+									        	<span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+								        		Function
+									    	</h3>
+										     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-python">
+def sumar(num):
+	# print(num + num)
+	return num + num
+
+sumar(8)
+
+
+
+										        </code></pre>
+										    </div>
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        Loops: Shoplist and Vowels
+										    </h3>
+										    <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-python">
+#FOR/WHILE LOOP
+shopping_list = []
+
+def remove_item(dtx):
+	index = idx - 1
+	item = shopping_list.pop(index)
+	print("Removed {}".format(item))
+
+
+def show_help():
+	print("\nWhat should we pick up at the store?")
+	print("Enter DONE to stop. Enter HELP for this help.")
+
+
+def add_to_list(item):
+	shopping_list.append(item)
+	print("Added! List has {} items".format(len(shopping_list)))
+
+def show_list():
+	print("\nHere's your list:")
+	for item in shopping_list:
+		print(item)
+
+
+show_help()
+
+
+while True:
+	new_item = input("> ")
+	if new_item == 'DONE':
+		print("\Here's your list:")
+		show_list()
+		break
+	elif new_item == 'HELP':
+		show_help()
+		continue
+	elif new_item == 'SHOW':
+		show_list()
+		continue
+	elif new_stuff == 'REMOVE':
+		show_list()
+		idx = input("What to delete?")
+		remove_item(int(idx))
+		continue
+
+	add_to_list(new_item)
+	continue
+
+show_list()
+										        </code></pre>
+										    </div>
+											
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        Try/Except
+										    </h3>
+										    <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-python">
+#TRY/EXCEPT
+user_string = input("What's your word?")
+user_num = input("What's your number?")
+
+
+try:
+	our_num = int(user_num)
+except:
+	our_num = float(user_num)
+
+if not '.' in user_num:
+	print(user_string[our_num])
+else:
+	ratio = round(len(user_string)*our_num)
+	print(user_string[ratio])
+										        </code></pre>
+										    </div>
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        Lists
+										    </h3>
+										    <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-python">
+#LISTS
+lista = [1, 2.5, 'a']
+len(lista)
+lista[2] = 'b'
+
+
+ver = list('helloworld')
+'w' in ver
+
+oracion = "oracion larga"
+variable2 = oracion.split()
+'_'.join(oracion)
+' '.join(oracion)
+
+
+
+
+
+
+#LISTAS II: COMBINANDO, EXTEND E INSERT
+a = [1, 2.3, "a"]
+a.append([4, 5, 6])
+b = list(range(10))
+b + [10, 11, 12]
+c = b + [10, 12]
+
+a.extend(range[7, 21])
+
+b = list('abcd')
+b.insert(1, 'b')
+b.insert(4, "e")
+
+#LISTAS III: DELETE Y REMOVE
+a = list('abcde')
+a.index('2')
+del a[3]
+
+b = 'hola'
+del b
+
+c = [1, 2, 3, 1]
+c.remove(1)
+
+
+#LISTAS IV: POP
+a = ['pedro', 'juan', 'diego']
+b = a.pop()
+a
+b
+c = a.pop()
+c
+a
+a.pop()
+
+
+
+#SLICE & SORT
+algo = 'hola tu'
+algo[1:5]
+algo[2]
+
+lista = list(range(1, 6))
+lista[2:3]
+lista[1:3]
+lista[2:len(lista)]
+lista[0]
+lista[:]
+lista[:2]
+lista[2:]
+
+ordenar = [2, 4, 3, 1, 5]
+ordenar.sort()
+
+
+#SLICE II
+algo = list(range(20))
+algo[:]
+algo[::2]
+algo[2::2]
+algo[::-1]
+algo[::-2]
+algo[::-3]
+algo[2:8]
+algo[8:2:-1]
+algo[7-1]
+algo[-1]
+
+
+
+#SLICE III. BORRANDO Y REEMPLAZANDO
+lista = [1, 2, "a", "b", "c", "d", 5, 6, 7, "f", "g", "h", 8, 9, "j"]
+del lista[:2]
+lista[4:5] = ["e", "f"]
+lista.index("f")
+lista.remove("f")
+lista[8:10] = ["i"]
+										        </code></pre>
+										    </div>
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        Dictionaries
+										    </h3>
+										    <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-python">
+#DICCIONARIOS
+diccionario = {'name': 'rodrigo', 'job': 'musician'}
+diccionarion['job']
+diccionario = {'name': {'first': 'rodrigo', 'last': 'delaporte'}}
+diccionario['names']
+diccionario['names']['last']
+
+game = {(2, 2): True, (1, 2): False}
+game[1, 2]
+
+
+
+# DICCIONARIO II
+diccionario = {'name': 'rodrigo', 'job':'musician'}
+del diccionario['job']
+diccionario['age']=30
+diccionario['age']=31
+diccionario.update({'name': 'rodrigo', 'job': 'developer'})
+
+
+#DICCIONARIO III: FORMAT STRING
+text = 'Hola yo soy {nombre} y vivo en {planeta}'
+text.format(nombre='rodrigo', planeta='Planeta Tierra')
+diccionario = {'nombre': 'rodrigo', 'planeta': 'Planeta Tierra'}
+texto.format(**diccionario)
+
+#DICCIONARIO IV: KEYS, METHODS
+for k in diccionario:
+	print(k)
+
+for k in diccionario:
+	print(diccionario[k])
+
+dir(diccionario)
+
+for values in diccionario.values():
+	print(values)
+
+# for k, v in diccionario:
+# 	print(k+':'+v)
+										        </code></pre>
+										    </div>
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        Tuples
+										    </h3>
+										    <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-python">
+#TUPLES I: LAS COMAS DEFINEN A UN TUPLE Y SON INMUTABLES
+tupla1 = (1, 2, 3)
+tupla2 = 1,2,3
+tupla3 = tuple([1, 2, 3])
+tupla3[2] = 7 -> No se modifica
+
+
+#TUPLES II: PACKING & UNPACKING
+a, b = 1, 2
+c = (3, 4)
+d, e = c
+f = d, e
+d == c
+del a
+del b
+a = 1
+b = 2
+a, b = b, a #Packing & unpacking
+
+def function():
+	return 1, 2, 3
+
+function()
+tup = function()
+x, y, z = function()
+>>> x
+>>> y
+>>> z
+
+
+#TUPLES Y FUNCIONES
+alfabeto = list('abcdefghijklmnñopqrstuvwxyz')
+count = 0
+for letra in alfabeto:
+	print('{}:{}'.format(count, letra))
+	count +=1
+
+>>>help(enumerate)
+for index, letra in enumerate(alfabeto):
+	print('{}:{}'.format(index, letra))
+
+for step in enumerate(alfabeto):
+	print('{}:{}'.format(step[0], step[1]))
+
+for step in enumerate(alfabeto):
+	print('{}:{}'.format(*step))
+
+for k, v in diccionario.items():
+	print('{}:{}'.format(key.title(), value))
+										        </code></pre>
+										    </div>
+
+										    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+										        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+										        Fizzbuzz
+										    </h3>
+										    <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-python">
+# FIZZBUZZ
+count = 0
+while count <= 100:
+	if count%5 == 0 and count%3 == 0:
+		print("Fizzbuzz")
+	elif count%3 == 0:
+		print("Fizz")
+	elif count%5 == 0:
+		print("Buzz")
+	else:
+		print(count)
+	count+=1
+
+
+nums = range(1, 100)
+for num in nums:
+	if num%3 == 0 and num%7 == 0:
+		print(str(num) + ": Fizzbuzz")
+	elif num%3 == 0:
+		print(str(num) + ": Fizz")
+	elif num%7 == 0:
+		print(str(num) + ": Buzz")
+	else:
+		print(num)
+
+
+
+total_nums = range(1, 100)
+fizzbuzzes = {
+	'fizz': [n for n in total_nums if n%3 == 0],
+	'Buzz': [n for n in total_nums if n%7 == 0]
+}
+
+fizzbuzzes = {key: set(value) for key, value in fizzbuzzes.items()}
+
+fizzbuzzes['fizzbuzz'] = {n for n in fizzbuzzes['fizz'].intersection(fizzbuzzes['buzz'])}
+
+										        </code></pre>
+										    </div>
+											<h3>Doctest</h3>
+										    <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+										        <pre><code class="language-python">
+# DOCTESTS
+"""Dungeon Game
+Explore a random dungeon to find a hidden door and escape. But be careful!
+The grue is hiding somewhere inside!
+
+Created: 2014
+Last Updated: 2015
+Author: Kenneth Love
+"""
+
+import os
+import random
+
+GAME_DIMENSIONS = (5, 5)
+player = {'location': None, 'path': []}
+
+
+def clear():
+    """Clear the screen"""
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+
+def build_cells(width, height):
+    """Create and return a `width` x `height` grid of pairs
+    
+    >>> cells = build_cells(2, 2)
+    >>> len(cells)
+    4
+    """
+    cells = []
+    for y in range(height):
+        for x in range(width):
+            cells.append((x, y))
+    return cells
+
+
+def get_locations(cells):
+    """Randomly pick starting locations for the monster, the door,
+    and the player
+    
+    >>> cells = build_cells(2, 2)
+    >>> m, d, p = get_locations(cells)
+    >>> m != d and d != p and m != p
+    True
+    >>> d in cells
+    True
+    """
+    monster = random.choice(cells)
+    door = random.choice(cells)
+    player = random.choice(cells)
+
+    if monster == door or monster == player or door == player:
+        monster, door, player = get_locations(cells)
+
+    return monster, door, player
+
+
+def get_moves(player):
+    """Based on the tuple of the player's current position,
+    return the list of acceptable moves
+    
+    >>> GAME_DIMENSIONS = (2, 2)
+    >>> get_moves((0, 2))
+    ['RIGHT', 'UP', 'DOWN']
+    """
+    x, y = player
+    moves = ['LEFT', 'RIGHT', 'UP', 'DOWN']
+    if x == 0:
+        moves.remove('LEFT')
+    if x == GAME_DIMENSIONS[0] - 1:
+        moves.remove('RIGHT')
+    if y == 0:
+        moves.remove('UP')
+    if y == GAME_DIMENSIONS[1] - 1:
+        moves.remove('DOWN')
+    return moves
+
+
+def move_player(player, move):
+    x, y = player['location']
+    player['path'].append((x, y))
+    if move == 'LEFT':
+        x -= 1
+    elif move == 'UP':
+        y -= 1
+    elif move == 'RIGHT':
+        x += 1
+    elif move == 'DOWN':
+        y += 1
+    return x, y
+
+
+def draw_map(cells):
+    print(' _'*GAME_DIMENSIONS[0])
+    row_end = GAME_DIMENSIONS[0]
+    tile = '|{}'
+    for index, cell in enumerate(cells):
+        if index % row_end < row_end - 1:
+            if cell == player['location']:
+                print(tile.format('X'), end='')
+            elif cell in player['path']:
+                print(tile.format('.'), end='')
+            else:
+                print(tile.format('_'), end='')
+        else:
+            if cell == player['location']:
+                print(tile.format('X|'))
+            elif cell in player['path']:
+                print(tile.format('.|'))
+            else:
+                print(tile.format('_|'))
+
+def play():
+    cells = build_cells(*GAME_DIMENSIONS)
+    monster, door, player['location'] = get_locations(cells)
+
+    while True:
+        clear()
+
+        print("WELCOME TO THE DUNGEON!")
+        moves = get_moves(player['location'])
+
+        draw_map(cells)
+
+        print("\nYou're currently in room {}".format(player['location']))
+        print("\nYou can move {}".format(', '.join(moves)))
+        print("Enter QUIT to quit")
+
+        move = input("> ")
+        move = move.upper()
+
+        if move in ['QUIT', 'Q']:
+            break
+
+        if move not in moves:
+            print("\n** Walls are hard! Stop running into them! **\n")
+            continue
+
+        player['location'] = move_player(player, move)
+
+        if player['location'] == door:
+            print("\n** You escaped! **\n")
+            break
+        elif player['location'] == monster:
+            print("\n** You got eaten! **\n")
+            break
+
+if __name__ == '__main__':
+    play()
+										        </code></pre>
+										        <pre><code class="language-python">
+# UNIT TESTS
+class Move:
+    better_than = None
+    worse_than = None
+
+    def __gt__(self, other):
+        """Is this instance being compared to an instance from a worse class"""
+        return other.__class__.__name__ in self.better_than
+
+    def __lt__(self, other):
+        """Is this instance being compared to an instance from a better class"""
+        return other.__class__.__name__ in self.worse_than
+
+    def __eq__(self, other):
+        """Is this instance being compared to an instance from the same class"""
+        return type(other) == type(self)
+
+    def __ne__(self, other):
+        """Is this instance being compared to an instance from another class"""
+        return other.__class__ != self.__class__
+
+
+class Rock(Move):
+    better_than = ['Scissors']
+    worse_than = ['Paper']
+
+
+class Paper(Move):
+    better_than = ['Rock']
+    worse_than = ['Scissors']
+
+
+class Scissors(Move):
+    better_than = ['Paper']
+    worse_than = ['Rock']
+
+
+
+
+
+
+import unittest
+
+import moves
+
+
+class MoveTests(unittest.TestCase):
+    def setUp(self):
+        self.rock = moves.Rock()
+        self.paper = moves.Paper()
+        self.scissors = moves.Scissors()
+
+    def test_five_plus_five(self):
+        assert 5 + 5 == 10
+        
+    def test_one_plus_one(self):
+        assert not 1 + 1 == 3
+        
+    def test_equal(self):
+        self.assertEqual(self.rock, moves.Rock())
+        
+    def test_not_equal(self):
+        self.assertNotEqual(self.rock, self.paper)
+        
+    def test_rock_better_than_scissors(self):
+        self.assertGreater(self.rock, self.scissors)
+        
+    def test_paper_worse_than_scissors(self):
+        self.assertLess(self.paper, self.scissors)
+
+if __name__ == '__main__':
+    unittest.main()
+										        </code></pre>
+										        </div>
+										        <div>
+										        	<h1>Vowels</h1>
+													<pre><code class="language-python">
+state_names = ["Alabama", "California", "Oklahoma", "Florida"]
+vowels = list('aeiou')
+output = []
+
+for state in state_names:
+	state_list = list(state.lower())
+
+	for vowel in vowels:
+		while True:
+			try:
+				state_list.remove(vowel)
+			except:
+				break
+	output.append(''.join(state_list).capitalize())
+
+print(output)
+													</code></pre>
+												</div>
+										    </div>
+										</div>
+							  </div>
+							</div>
+							<div id="menu2" class="tab-pane fade">
+								<p class="accordion-expand-holder">
+							    <a class="accordion-expand-all" href="#">Expand all</a>
+							</p>
+								<div id="accordion" class="ui-accordion ui-widget ui-helper-reset">
+							    <h1>Hi</h1>
+							</div>
+								<div id="menu3" class="tab-pane fade">
+								  <h3>Objects</h3>
+								  <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+								</div>
+							</div>
+							<div id="menu4" class="tab-pane fade">
+								  <h3>Functional Programming</h3>
+								  <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+								</div>
+								<div id="menu4" class="tab-pane fade">
+								  <h3>Comprehensions</h3>
+								  <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+								</div>
+								<div id="menu4" class="tab-pane fade">
+								  <h3>Decorators</h3>
+								  <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+								</div>
+								<div id="menu4" class="tab-pane fade">
+								  <h3>Algorythms</h3>
+								  <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+								</div>
+						</div>
+					</div><!-- /st-content-inner -->
+				</div><!-- /st-content -->
+			</div><!-- /st-pusher -->
+		</div><!-- /st-container -->
+		<script type="text/javascript" src="../js/bootstrap.js"></script>
+		<script type="text/javascript" src="../js/prism.js"></script>
+		<script src="../js/classie.js"></script>
+		<script src="../js/sidebarEffects.js"></script>
+		<script type="text/javascript" src="../js/script.js"></script>
+
+	</body>
+</html>
